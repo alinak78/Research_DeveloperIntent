@@ -1,0 +1,19 @@
+{
+  "task_id": "synthetic_optional_email",
+  "status": "authored illustration; not a grounded domain task or model evaluation",
+  "ambiguous_prompt": "Normalize surrounding whitespace in names and email addresses. Return a list of records with id, group, name, and email fields.",
+  "reference_requirement": "Email is optional. Retain every input record ID, preserve None for missing email, and do not merge records.",
+  "authority": "Researcher-authored illustrative policy; no institution or stakeholder validation",
+  "affected_parties": "Hypothetical record subjects; no real people or social groups represented",
+  "alternative_policy": "Exclude records without email only if an independently justified workflow requires that field; this is not the chosen illustrative reference.",
+  "groups": "A and B are arbitrary fixture labels with constructed missingness, not demographic categories",
+  "public_rows": [
+    {"id": "P1", "group": "A", "name": " Example ", "email": " x@example.invalid "}
+  ],
+  "hidden_rows": [
+    {"id": "A1", "group": "A", "name": " Alpha ", "email": " a@example.invalid "},
+    {"id": "A2", "group": "A", "name": " Beta ", "email": " b@example.invalid "},
+    {"id": "B1", "group": "B", "name": " Gamma ", "email": null},
+    {"id": "B2", "group": "B", "name": " Delta ", "email": " d@example.invalid "}
+  ]
+}

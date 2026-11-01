@@ -1,0 +1,275 @@
+{
+  "conditions": {
+    "ambiguous": {
+      "n": 60,
+      "public_passers": 0,
+      "public_pass_rate": 0.0,
+      "full_compliance": 0,
+      "full_compliance_rate": 0.0,
+      "violations_among_passers": 0,
+      "joint_failure_rate": 0.0,
+      "macro_ivr": null,
+      "micro_ivr": null,
+      "qualifying_tasks": 0,
+      "evaluation_statuses": {
+        "rejected": 60
+      },
+      "generation_failures": 0,
+      "truncated_generations": 0,
+      "per_task": {
+        "optional_email__email": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "optional_email__phone": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "optional_email__postcode": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "optional_email__middle_name": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "name_deduplication__name": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "name_deduplication__email": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "name_deduplication__address": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "name_deduplication__phone": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "unmatched_join__district": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        },
+        "unmatched_join__language": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        },
+        "unmatched_join__office": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        },
+        "unmatched_join__region": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        }
+      }
+    },
+    "explicit": {
+      "n": 60,
+      "public_passers": 0,
+      "public_pass_rate": 0.0,
+      "full_compliance": 0,
+      "full_compliance_rate": 0.0,
+      "violations_among_passers": 0,
+      "joint_failure_rate": 0.0,
+      "macro_ivr": null,
+      "micro_ivr": null,
+      "qualifying_tasks": 0,
+      "evaluation_statuses": {
+        "rejected": 60
+      },
+      "generation_failures": 0,
+      "truncated_generations": 1,
+      "per_task": {
+        "optional_email__email": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "optional_email__phone": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "optional_email__postcode": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "optional_email__middle_name": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "optional_email"
+        },
+        "name_deduplication__name": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "name_deduplication__email": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "name_deduplication__address": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "name_deduplication__phone": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "name_deduplication"
+        },
+        "unmatched_join__district": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        },
+        "unmatched_join__language": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        },
+        "unmatched_join__office": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        },
+        "unmatched_join__region": {
+          "n": 5,
+          "public_passers": 0,
+          "violations_among_passers": 0,
+          "ivr": null,
+          "full_compliance": 0,
+          "family": "unmatched_join"
+        }
+      }
+    }
+  },
+  "families": {
+    "optional_email": {
+      "ambiguous": {
+        "n": 20,
+        "public_passers": 0,
+        "full_compliance": 0
+      },
+      "explicit": {
+        "n": 20,
+        "public_passers": 0,
+        "full_compliance": 0
+      }
+    },
+    "name_deduplication": {
+      "ambiguous": {
+        "n": 20,
+        "public_passers": 0,
+        "full_compliance": 0
+      },
+      "explicit": {
+        "n": 20,
+        "public_passers": 0,
+        "full_compliance": 0
+      }
+    },
+    "unmatched_join": {
+      "ambiguous": {
+        "n": 20,
+        "public_passers": 0,
+        "full_compliance": 0
+      },
+      "explicit": {
+        "n": 20,
+        "public_passers": 0,
+        "full_compliance": 0
+      }
+    }
+  },
+  "full_compliance_explicit_minus_ambiguous": 0.0,
+  "n_records": 120,
+  "raw_sha256": "fee5f1a3ba5a73d76f63233667cb97f715272c51ed02bc563554cae58aace5bd"
+}

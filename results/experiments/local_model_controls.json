@@ -1,0 +1,1892 @@
+{
+  "positive_controls": [
+    {
+      "task_id": "optional_email__email",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "email": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "email": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "email": "Delta",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "email": null,
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "optional_email__phone",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "phone": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "phone": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "phone": "Delta",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "phone": null,
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "optional_email__postcode",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "postcode": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "postcode": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "postcode": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "postcode": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "postcode": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "postcode": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "postcode": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "postcode": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "postcode": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "postcode": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "postcode": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "postcode": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "postcode": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "postcode": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "postcode": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "postcode": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "postcode": "Delta",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "postcode": null,
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "postcode": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "postcode": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "postcode": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "optional_email__middle_name",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "middle_name": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "middle_name": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "middle_name": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "middle_name": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "middle_name": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "middle_name": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "middle_name": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "middle_name": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "middle_name": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "middle_name": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "middle_name": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "middle_name": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "middle_name": null,
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "middle_name": null,
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "middle_name": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "middle_name": null,
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "middle_name": "Delta",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "middle_name": null,
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "middle_name": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "middle_name": null,
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "middle_name": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "name_deduplication__name",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "name": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "name": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "name": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "name": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "name": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "name": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "name": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "name": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "name": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "name": "First",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "name": "Third",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "name": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "name": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "name": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R2",
+                "group": "B",
+                "name": "Shared",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "name": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "name": "Shared",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "name_deduplication__email",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "email": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "First",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "email": "Third",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "email": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "email": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R2",
+                "group": "B",
+                "email": "Shared",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "email": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "email": "Shared",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "name_deduplication__address",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "address": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "address": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "address": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "address": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "address": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "address": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "address": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "address": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "address": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "address": "First",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "address": "Third",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "address": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "address": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "address": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R2",
+                "group": "B",
+                "address": "Shared",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "address": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "address": "Shared",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "name_deduplication__phone",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "phone": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "First",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "phone": "Third",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Shared",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "phone": "Shared",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": "Shared",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R2",
+                "group": "B",
+                "phone": "Shared",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R1",
+                "group": "B",
+                "phone": "Other",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "phone": "Shared",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "unmatched_join__district",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "district": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "district": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "district": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "district": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "district": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "district": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "district": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "district": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "district": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "district": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "district": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "district": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "district": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "district": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "district": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "district": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "district": "Alpha",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "district": "Unknown",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "district": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "district": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "district": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "unmatched_join__language",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "language": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "language": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "language": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "language": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "language": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "language": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "language": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "language": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "language": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "language": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "language": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "language": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "language": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "language": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "language": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "language": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "language": "Alpha",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "language": "Unknown",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "language": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "language": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "language": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "unmatched_join__office",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "office": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "office": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "office": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "office": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "office": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "office": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "office": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "office": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "office": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "office": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "office": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "office": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "office": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "office": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "office": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "office": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "office": "Alpha",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "office": "Unknown",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "office": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "office": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "office": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "unmatched_join__region",
+      "authored_positive_control_pass": true,
+      "evaluation": {
+        "status": "evaluated",
+        "cases": [
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "region": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "region": "Beta",
+                "untouched": "payload-1"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "region": "Gamma",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "region": "Delta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "region": "Epsilon",
+                "untouched": "payload-2"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "region": "Alpha",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "region": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "region": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "region": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "region": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "region": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "region": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "region": "Unknown",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R0",
+                "group": "A",
+                "region": "Unknown",
+                "untouched": "payload-0"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "region": "Beta",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "region": "Unknown",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R3",
+                "group": "B",
+                "region": "Alpha",
+                "untouched": "payload-3"
+              }
+            ]
+          },
+          {
+            "status": "ok",
+            "output": [
+              {
+                "id": "R3",
+                "group": "B",
+                "region": "Unknown",
+                "untouched": "payload-3"
+              },
+              {
+                "id": "R2",
+                "group": "B",
+                "region": "Beta",
+                "untouched": "payload-2"
+              },
+              {
+                "id": "R1",
+                "group": "A",
+                "region": "Unknown",
+                "untouched": "payload-1"
+              },
+              {
+                "id": "R0",
+                "group": "A",
+                "region": "Alpha",
+                "untouched": "payload-0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "prohibited_file_access_rejected": {
+    "status": "rejected",
+    "reason": "Unsupported attribute"
+  }
+}

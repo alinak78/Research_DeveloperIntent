@@ -1,0 +1,215 @@
+{
+  "run_utc": "2026-11-01T18:46:54.793679+00:00",
+  "design": "3 families x 16 compositions x 4 variants x 3 authored strategies x 2 authored policies",
+  "provenance": "researcher-authored synthetic data and implementations; no model generations or institutional policies",
+  "n_evaluations": 1152,
+  "n_distinct_fixtures": 192,
+  "n_ordinary_case_checks_passed": 9,
+  "raw_sha256": "a9b7e61595a6611edd11c0a13509ac5cfd492243158bdc0e470345a014792308",
+  "script_sha256": "59ceb5ea41db57253cb985a4857d41c154c84eaf60a7216c42bf5338c56cab7e",
+  "design_sha256": "7208be739d6dc952db21f52067ecbaf175d4a388c6267603a846742b83f4e8da",
+  "group_gap_range_preserve_policy": [
+    -1.0,
+    1.0
+  ],
+  "cells": [
+    {
+      "family": "name_deduplication",
+      "strategy": "filter",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 64,
+      "weak_both_pass": 64,
+      "false_reassurance": 0
+    },
+    {
+      "family": "name_deduplication",
+      "strategy": "filter",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 12,
+      "payload_pass": 12,
+      "exact_pass": 12,
+      "weak_both_pass": 12,
+      "false_reassurance": 0
+    },
+    {
+      "family": "name_deduplication",
+      "strategy": "identity_alias",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 12,
+      "payload_pass": 12,
+      "exact_pass": 12,
+      "weak_both_pass": 12,
+      "false_reassurance": 0
+    },
+    {
+      "family": "name_deduplication",
+      "strategy": "identity_alias",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 12,
+      "weak_both_pass": 64,
+      "false_reassurance": 52
+    },
+    {
+      "family": "name_deduplication",
+      "strategy": "preserve",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 12,
+      "payload_pass": 12,
+      "exact_pass": 12,
+      "weak_both_pass": 12,
+      "false_reassurance": 0
+    },
+    {
+      "family": "name_deduplication",
+      "strategy": "preserve",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 64,
+      "weak_both_pass": 64,
+      "false_reassurance": 0
+    },
+    {
+      "family": "optional_email",
+      "strategy": "filter",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 64,
+      "weak_both_pass": 64,
+      "false_reassurance": 0
+    },
+    {
+      "family": "optional_email",
+      "strategy": "filter",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 4,
+      "payload_pass": 4,
+      "exact_pass": 4,
+      "weak_both_pass": 4,
+      "false_reassurance": 0
+    },
+    {
+      "family": "optional_email",
+      "strategy": "identity_alias",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 4,
+      "payload_pass": 4,
+      "exact_pass": 4,
+      "weak_both_pass": 4,
+      "false_reassurance": 0
+    },
+    {
+      "family": "optional_email",
+      "strategy": "identity_alias",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 4,
+      "weak_both_pass": 64,
+      "false_reassurance": 60
+    },
+    {
+      "family": "optional_email",
+      "strategy": "preserve",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 4,
+      "payload_pass": 4,
+      "exact_pass": 4,
+      "weak_both_pass": 4,
+      "false_reassurance": 0
+    },
+    {
+      "family": "optional_email",
+      "strategy": "preserve",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 64,
+      "weak_both_pass": 64,
+      "false_reassurance": 0
+    },
+    {
+      "family": "unmatched_join",
+      "strategy": "filter",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 64,
+      "weak_both_pass": 64,
+      "false_reassurance": 0
+    },
+    {
+      "family": "unmatched_join",
+      "strategy": "filter",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 4,
+      "payload_pass": 4,
+      "exact_pass": 4,
+      "weak_both_pass": 4,
+      "false_reassurance": 0
+    },
+    {
+      "family": "unmatched_join",
+      "strategy": "identity_alias",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 4,
+      "payload_pass": 4,
+      "exact_pass": 4,
+      "weak_both_pass": 4,
+      "false_reassurance": 0
+    },
+    {
+      "family": "unmatched_join",
+      "strategy": "identity_alias",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 4,
+      "weak_both_pass": 64,
+      "false_reassurance": 60
+    },
+    {
+      "family": "unmatched_join",
+      "strategy": "preserve",
+      "policy": "filter",
+      "n": 64,
+      "count_pass": 4,
+      "payload_pass": 4,
+      "exact_pass": 4,
+      "weak_both_pass": 4,
+      "false_reassurance": 0
+    },
+    {
+      "family": "unmatched_join",
+      "strategy": "preserve",
+      "policy": "preserve",
+      "n": 64,
+      "count_pass": 64,
+      "payload_pass": 64,
+      "exact_pass": 64,
+      "weak_both_pass": 64,
+      "false_reassurance": 0
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "run_start_utc": "2026-11-01T18:51:30.972073+00:00",
+  "models": {
+    "models": [
+      {
+        "name": "llama3.2:1b",
+        "model": "llama3.2:1b",
+        "modified_at": "2026-05-12T01:56:11.233381346-04:00",
+        "size": 1321098329,
+        "digest": "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "1.2B",
+          "quantization_level": "Q8_0",
+          "context_length": 131072,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      }
+    ]
+  },
+  "server_version": {
+    "version": "0.34.0"
+  },
+  "model": "llama3.2:1b",
+  "settings": {
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "num_predict": 512,
+    "num_ctx": 2048
+  },
+  "design_sha256": "a673bec09199d0d2e71d88f1728d9c17bf0ca17dba822d5b6663146f2a691b6a",
+  "tasks_sha256": "cfefa58eb2b6ad3b202bd3723df1ab428216ba5680b4e59e0981ede00da37f72",
+  "runner_sha256": "049fe9bc51e3f1619403794beaaa2e426d1e15b6c2b212df37b16c79e982d86e",
+  "worker_sha256": "dc50e52d8bf8cdd354e1c5f9f91583a8aac4927e1ffcb86c7ccbb74adbba20e4"
+}

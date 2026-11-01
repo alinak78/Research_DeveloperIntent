@@ -1,0 +1,3944 @@
+{
+  "run_utc": "2026-11-01T18:47:18.350873+00:00",
+  "provenance": "exhaustive reference-subset rescoring of archived outcomes; no prompts or generations changed",
+  "script_sha256": "8dde4cd2eb36288406078b2c0af67fcc71edeea33c3d16b8e9569cb5dad090a3",
+  "models": {
+    "claude_sonnet_4_6": {
+      "summary": {
+        "model_label": "claude-sonnet-4-6",
+        "input_sha256": "0e32bbd305439486c9b0fa28c4f95114b8eab29542ffb32dfc447ed7c4723f83",
+        "qualifying_tasks": 47,
+        "n_task_subset_evaluations": 181,
+        "tasks_sensitive_to_subset": 19,
+        "macro_full_ivr": 0.5446808510638298,
+        "macro_minimum_ivr": 0.1872340425531915,
+        "macro_maximum_ivr": 0.5446808510638298,
+        "macro_uniform_subset_mean_ivr": 0.42755825734549135,
+        "macro_single_constraint_mean_ivr": 0.36241134751773046
+      },
+      "per_task": {
+        "HumanEval/26": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/18": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/25": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/12": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.4,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.4,
+          "uniform_subset_mean_ivr": 0.26666666666666666,
+          "single_constraint_mean_ivr": 0.2,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.4,
+              "violations": 2
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.4,
+              "violations": 2
+            }
+          ]
+        },
+        "HumanEval/20": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/21": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/7": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/47": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/30": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/34": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/51": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/57": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/58": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.6,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.8666666666666667,
+          "single_constraint_mean_ivr": 0.8,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.6,
+              "violations": 3
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/42": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/65": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/68": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/70": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/72": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.5714285714285714,
+          "single_constraint_mean_ivr": 0.3333333333333333,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/74": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/64": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.8571428571428571,
+          "single_constraint_mean_ivr": 0.6666666666666666,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/66": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/71": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/86": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/90": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.8571428571428571,
+          "single_constraint_mean_ivr": 0.6666666666666666,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/95": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.5714285714285714,
+          "single_constraint_mean_ivr": 0.3333333333333333,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/98": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/99": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/102": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/104": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/108": {
+          "qualifies": true,
+          "public_passers": 1,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/120": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/126": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.5714285714285714,
+          "single_constraint_mean_ivr": 0.3333333333333333,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/91": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/131": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/135": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/136": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/140": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/149": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/151": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/158": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/163": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/88": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/93": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/101": {
+          "qualifies": false,
+          "public_passers": 0,
+          "subsets": []
+        },
+        "HumanEval/105": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.2,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.2,
+          "uniform_subset_mean_ivr": 0.13333333333333333,
+          "single_constraint_mean_ivr": 0.1,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.2,
+              "violations": 1
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.2,
+              "violations": 1
+            }
+          ]
+        },
+        "HumanEval/111": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.2,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.7333333333333334,
+          "single_constraint_mean_ivr": 0.6,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.2,
+              "violations": 1
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/112": {
+          "qualifies": false,
+          "public_passers": 0,
+          "subsets": []
+        },
+        "HumanEval/145": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/161": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        }
+      }
+    },
+    "gpt_4_1": {
+      "summary": {
+        "model_label": "gpt-4.1",
+        "input_sha256": "e8c2458ded258c6d72de64db1a5a86f16374be638cdbaef91391ca8d3b09d3cd",
+        "qualifying_tasks": 46,
+        "n_task_subset_evaluations": 178,
+        "tasks_sensitive_to_subset": 23,
+        "macro_full_ivr": 0.6347826086956522,
+        "macro_minimum_ivr": 0.18695652173913047,
+        "macro_maximum_ivr": 0.6347826086956522,
+        "macro_uniform_subset_mean_ivr": 0.4894409937888199,
+        "macro_single_constraint_mean_ivr": 0.4079710144927536
+      },
+      "per_task": {
+        "HumanEval/26": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/18": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.8,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.8,
+          "uniform_subset_mean_ivr": 0.5333333333333333,
+          "single_constraint_mean_ivr": 0.4,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            }
+          ]
+        },
+        "HumanEval/25": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/12": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/20": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/21": {
+          "qualifies": false,
+          "public_passers": 0,
+          "subsets": []
+        },
+        "HumanEval/7": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/47": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/30": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/34": {
+          "qualifies": true,
+          "public_passers": 3,
+          "n_constraints": 1,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 3
+            }
+          ]
+        },
+        "HumanEval/51": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/57": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/58": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/42": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/65": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/68": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.8,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.8,
+          "uniform_subset_mean_ivr": 0.6857142857142857,
+          "single_constraint_mean_ivr": 0.5333333333333333,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            }
+          ]
+        },
+        "HumanEval/70": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/72": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.5714285714285714,
+          "single_constraint_mean_ivr": 0.3333333333333333,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/74": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.4,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.4,
+          "uniform_subset_mean_ivr": 0.26666666666666666,
+          "single_constraint_mean_ivr": 0.2,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.4,
+              "violations": 2
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.4,
+              "violations": 2
+            }
+          ]
+        },
+        "HumanEval/64": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.8571428571428571,
+          "single_constraint_mean_ivr": 0.6666666666666666,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/66": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/71": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/86": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/90": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.8571428571428571,
+          "single_constraint_mean_ivr": 0.6666666666666666,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/95": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.5714285714285714,
+          "single_constraint_mean_ivr": 0.3333333333333333,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/98": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/99": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/102": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/104": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/108": {
+          "qualifies": false,
+          "public_passers": 0,
+          "subsets": []
+        },
+        "HumanEval/120": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/126": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 3,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.5714285714285714,
+          "single_constraint_mean_ivr": 0.3333333333333333,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C4"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3",
+                "C4"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/91": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/131": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/135": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/136": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.0,
+          "uniform_subset_mean_ivr": 0.0,
+          "single_constraint_mean_ivr": 0.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            }
+          ]
+        },
+        "HumanEval/140": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.2,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.8,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.2,
+              "violations": 1
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/149": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/151": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/158": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/163": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.4,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.7999999999999999,
+          "single_constraint_mean_ivr": 0.7,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.4,
+              "violations": 2
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/88": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/93": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/101": {
+          "qualifies": true,
+          "public_passers": 4,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 4
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 4
+            }
+          ]
+        },
+        "HumanEval/105": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 0.2,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 0.2,
+          "uniform_subset_mean_ivr": 0.13333333333333333,
+          "single_constraint_mean_ivr": 0.1,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 0.2,
+              "violations": 1
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 0.2,
+              "violations": 1
+            }
+          ]
+        },
+        "HumanEval/111": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/112": {
+          "qualifies": false,
+          "public_passers": 0,
+          "subsets": []
+        },
+        "HumanEval/145": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 2,
+          "full_ivr": 1.0,
+          "minimum_ivr": 0.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 0.6666666666666666,
+          "single_constraint_mean_ivr": 0.5,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            },
+            {
+              "ids": [
+                "C3"
+              ],
+              "ivr": 0.0,
+              "violations": 0
+            },
+            {
+              "ids": [
+                "C2",
+                "C3"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        },
+        "HumanEval/161": {
+          "qualifies": true,
+          "public_passers": 5,
+          "n_constraints": 1,
+          "full_ivr": 1.0,
+          "minimum_ivr": 1.0,
+          "maximum_ivr": 1.0,
+          "uniform_subset_mean_ivr": 1.0,
+          "single_constraint_mean_ivr": 1.0,
+          "subsets": [
+            {
+              "ids": [
+                "C2"
+              ],
+              "ivr": 1.0,
+              "violations": 5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "paired_common_support": {
+    "n_tasks": 45,
+    "task_ids": [
+      "HumanEval/102",
+      "HumanEval/104",
+      "HumanEval/105",
+      "HumanEval/111",
+      "HumanEval/12",
+      "HumanEval/120",
+      "HumanEval/126",
+      "HumanEval/131",
+      "HumanEval/135",
+      "HumanEval/136",
+      "HumanEval/140",
+      "HumanEval/145",
+      "HumanEval/149",
+      "HumanEval/151",
+      "HumanEval/158",
+      "HumanEval/161",
+      "HumanEval/163",
+      "HumanEval/18",
+      "HumanEval/20",
+      "HumanEval/25",
+      "HumanEval/26",
+      "HumanEval/30",
+      "HumanEval/34",
+      "HumanEval/42",
+      "HumanEval/47",
+      "HumanEval/51",
+      "HumanEval/57",
+      "HumanEval/58",
+      "HumanEval/64",
+      "HumanEval/65",
+      "HumanEval/66",
+      "HumanEval/68",
+      "HumanEval/7",
+      "HumanEval/70",
+      "HumanEval/71",
+      "HumanEval/72",
+      "HumanEval/74",
+      "HumanEval/86",
+      "HumanEval/88",
+      "HumanEval/90",
+      "HumanEval/91",
+      "HumanEval/93",
+      "HumanEval/95",
+      "HumanEval/98",
+      "HumanEval/99"
+    ],
+    "excluded_task_ids": [
+      "HumanEval/101",
+      "HumanEval/108",
+      "HumanEval/112",
+      "HumanEval/21"
+    ],
+    "claude_common_macro_ivr": 0.5688888888888889,
+    "gpt_common_macro_ivr": 0.6266666666666667,
+    "gpt_minus_claude_macro_ivr": 0.05777777777777778,
+    "paired_task_bootstrap_ci95": [
+      0.008888888888888889,
+      0.12000000000000001
+    ],
+    "n_bootstrap": 10000,
+    "seed": 20261101,
+    "interpretation": "exploratory paired task comparison; no new model generation or population inference"
+  }
+}

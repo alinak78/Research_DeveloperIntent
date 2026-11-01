@@ -1,0 +1,2 @@
+# Offline pilot analysis only; example validation uses the standard library.
+numpy>=1.24

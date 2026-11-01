@@ -1,0 +1,651 @@
+{
+  "claude_sonnet_4_6": {
+    "model_label_from_log": "claude-sonnet-4-6",
+    "n_tasks": 49,
+    "n_generations": 245,
+    "n_qualifying_tasks": 47,
+    "excluded_task_ids": [
+      "HumanEval/101",
+      "HumanEval/112"
+    ],
+    "public_passers": 231,
+    "violations_among_passers": 128,
+    "reference_failures_all_generations": 142,
+    "fully_compliant": 103,
+    "public_pass_rate": 0.9428571428571428,
+    "macro_ivr": 0.5446808510638298,
+    "micro_ivr": 0.5541125541125541,
+    "joint_public_pass_reference_fail_rate": 0.5224489795918368,
+    "reference_failure_rate_all_generations": 0.5795918367346938,
+    "full_compliance_rate": 0.4204081632653061,
+    "macro_ivr_ci95": [
+      0.40425531914893614,
+      0.6808510638297872
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 42,
+    "per_task": {
+      "HumanEval/26": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/18": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/25": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/12": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 2,
+        "ivr": 0.4
+      },
+      "HumanEval/20": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/21": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/7": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/47": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/30": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/34": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/51": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/57": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/58": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/42": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/65": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/68": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/70": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/72": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/74": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/64": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/66": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/71": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/86": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/90": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/95": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/98": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/99": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/102": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/104": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/108": {
+        "n": 5,
+        "public_passers": 1,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/120": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/126": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/91": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/131": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/135": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/136": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/140": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/149": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/151": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/158": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/163": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/88": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/93": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/101": {
+        "n": 5,
+        "public_passers": 0,
+        "violations_among_passers": 0,
+        "ivr": null
+      },
+      "HumanEval/105": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 1,
+        "ivr": 0.2
+      },
+      "HumanEval/111": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/112": {
+        "n": 5,
+        "public_passers": 0,
+        "violations_among_passers": 0,
+        "ivr": null
+      },
+      "HumanEval/145": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/161": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      }
+    },
+    "input_sha256": "0e32bbd305439486c9b0fa28c4f95114b8eab29542ffb32dfc447ed7c4723f83",
+    "input_file": "data/pilot/claude_sonnet_4_6.json"
+  },
+  "gpt_4_1": {
+    "model_label_from_log": "gpt-4.1",
+    "n_tasks": 49,
+    "n_generations": 245,
+    "n_qualifying_tasks": 46,
+    "excluded_task_ids": [
+      "HumanEval/21",
+      "HumanEval/108",
+      "HumanEval/112"
+    ],
+    "public_passers": 227,
+    "violations_among_passers": 143,
+    "reference_failures_all_generations": 161,
+    "fully_compliant": 84,
+    "public_pass_rate": 0.926530612244898,
+    "macro_ivr": 0.6347826086956522,
+    "micro_ivr": 0.6299559471365639,
+    "joint_public_pass_reference_fail_rate": 0.5836734693877551,
+    "reference_failure_rate_all_generations": 0.6571428571428571,
+    "full_compliance_rate": 0.34285714285714286,
+    "macro_ivr_ci95": [
+      0.5,
+      0.7652173913043478
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 42,
+    "per_task": {
+      "HumanEval/26": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/18": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 4,
+        "ivr": 0.8
+      },
+      "HumanEval/25": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/12": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/20": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/21": {
+        "n": 5,
+        "public_passers": 0,
+        "violations_among_passers": 0,
+        "ivr": null
+      },
+      "HumanEval/7": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/47": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/30": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/34": {
+        "n": 5,
+        "public_passers": 3,
+        "violations_among_passers": 3,
+        "ivr": 1.0
+      },
+      "HumanEval/51": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/57": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/58": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/42": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/65": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/68": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 4,
+        "ivr": 0.8
+      },
+      "HumanEval/70": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/72": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/74": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 2,
+        "ivr": 0.4
+      },
+      "HumanEval/64": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/66": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/71": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/86": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/90": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/95": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/98": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/99": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/102": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/104": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/108": {
+        "n": 5,
+        "public_passers": 0,
+        "violations_among_passers": 0,
+        "ivr": null
+      },
+      "HumanEval/120": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/126": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/91": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/131": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/135": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/136": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 0,
+        "ivr": 0.0
+      },
+      "HumanEval/140": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/149": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/151": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/158": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/163": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/88": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/93": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/101": {
+        "n": 5,
+        "public_passers": 4,
+        "violations_among_passers": 4,
+        "ivr": 1.0
+      },
+      "HumanEval/105": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 1,
+        "ivr": 0.2
+      },
+      "HumanEval/111": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/112": {
+        "n": 5,
+        "public_passers": 0,
+        "violations_among_passers": 0,
+        "ivr": null
+      },
+      "HumanEval/145": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      },
+      "HumanEval/161": {
+        "n": 5,
+        "public_passers": 5,
+        "violations_among_passers": 5,
+        "ivr": 1.0
+      }
+    },
+    "input_sha256": "e8c2458ded258c6d72de64db1a5a86f16374be638cdbaef91391ca8d3b09d3cd",
+    "input_file": "data/pilot/gpt_4_1.json"
+  }
+}

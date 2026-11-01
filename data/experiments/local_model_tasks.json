@@ -1,0 +1,3806 @@
+[
+  {
+    "task_id": "optional_email__email",
+    "family": "optional_email",
+    "field": "email",
+    "ambiguous_request": "Normalize whitespace in the 'email' field of intake records. Return cleaned records as a list of dictionaries.",
+    "explicit_policy": "The 'email' field is optional: retain every input row, including rows where this field is None. Strip only string values in this field; leave None unchanged. Preserve each id and all other fields exactly; do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": " Delta ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": "Delta",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "email": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "optional_email__phone",
+    "family": "optional_email",
+    "field": "phone",
+    "ambiguous_request": "Normalize whitespace in the 'phone' field of intake records. Return cleaned records as a list of dictionaries.",
+    "explicit_policy": "The 'phone' field is optional: retain every input row, including rows where this field is None. Strip only string values in this field; leave None unchanged. Preserve each id and all other fields exactly; do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": " Delta ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": "Delta",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "optional_email__postcode",
+    "family": "optional_email",
+    "field": "postcode",
+    "ambiguous_request": "Normalize whitespace in the 'postcode' field of intake records. Return cleaned records as a list of dictionaries.",
+    "explicit_policy": "The 'postcode' field is optional: retain every input row, including rows where this field is None. Strip only string values in this field; leave None unchanged. Preserve each id and all other fields exactly; do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": " Delta ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": "Delta",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "postcode": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "postcode": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "postcode": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "postcode": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "optional_email__middle_name",
+    "family": "optional_email",
+    "field": "middle_name",
+    "ambiguous_request": "Normalize whitespace in the 'middle_name' field of intake records. Return cleaned records as a list of dictionaries.",
+    "explicit_policy": "The 'middle_name' field is optional: retain every input row, including rows where this field is None. Strip only string values in this field; leave None unchanged. Preserve each id and all other fields exactly; do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": " Delta ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": "Delta",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "middle_name": null,
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "middle_name": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "middle_name": null,
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "middle_name": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "name_deduplication__name",
+    "family": "name_deduplication",
+    "field": "name",
+    "ambiguous_request": "Clean duplicate-looking intake records using 'name' as a comparison field. Strip whitespace in 'name' and return cleaned record dictionaries.",
+    "explicit_policy": "Deduplicate only on exact equality of id, keeping the first input row for a repeated id. Distinct ids must remain separate even when 'name' values match. Strip whitespace only in 'name'; preserve all other fields and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "name": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "name": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "name": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "name": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "name": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "name": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": " First ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "name": " Second ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "name": " Third ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "name": " Fourth ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": "First",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "name": "Third",
+            "untouched": "payload-2"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "name": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "name": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "name": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "name": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R2",
+            "group": "B",
+            "name": " Shared ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "name": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "name": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "name": " Shared ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R2",
+            "group": "B",
+            "name": "Shared",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "name": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "name": "Shared",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "name_deduplication__email",
+    "family": "name_deduplication",
+    "field": "email",
+    "ambiguous_request": "Clean duplicate-looking intake records using 'email' as a comparison field. Strip whitespace in 'email' and return cleaned record dictionaries.",
+    "explicit_policy": "Deduplicate only on exact equality of id, keeping the first input row for a repeated id. Distinct ids must remain separate even when 'email' values match. Strip whitespace only in 'email'; preserve all other fields and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "email": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " First ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Second ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "email": " Third ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "email": " Fourth ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "First",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "email": "Third",
+            "untouched": "payload-2"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "email": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "email": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R2",
+            "group": "B",
+            "email": " Shared ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "email": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "email": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "email": " Shared ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R2",
+            "group": "B",
+            "email": "Shared",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "email": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "email": "Shared",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "name_deduplication__address",
+    "family": "name_deduplication",
+    "field": "address",
+    "ambiguous_request": "Clean duplicate-looking intake records using 'address' as a comparison field. Strip whitespace in 'address' and return cleaned record dictionaries.",
+    "explicit_policy": "Deduplicate only on exact equality of id, keeping the first input row for a repeated id. Distinct ids must remain separate even when 'address' values match. Strip whitespace only in 'address'; preserve all other fields and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "address": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "address": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "address": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "address": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "address": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "address": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": " First ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "address": " Second ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "address": " Third ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "address": " Fourth ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": "First",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "address": "Third",
+            "untouched": "payload-2"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "address": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "address": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "address": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "address": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R2",
+            "group": "B",
+            "address": " Shared ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "address": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "address": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "address": " Shared ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R2",
+            "group": "B",
+            "address": "Shared",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "address": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "address": "Shared",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "name_deduplication__phone",
+    "family": "name_deduplication",
+    "field": "phone",
+    "ambiguous_request": "Clean duplicate-looking intake records using 'phone' as a comparison field. Strip whitespace in 'phone' and return cleaned record dictionaries.",
+    "explicit_policy": "Deduplicate only on exact equality of id, keeping the first input row for a repeated id. Distinct ids must remain separate even when 'phone' values match. Strip whitespace only in 'phone'; preserve all other fields and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "phone": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " First ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Second ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "phone": " Third ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "phone": " Fourth ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "First",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "phone": "Third",
+            "untouched": "payload-2"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Shared ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "phone": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": " Shared ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Shared",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": "Shared",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": "Shared",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": " Shared ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "phone": " Other ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "phone": " Shared ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": " Shared ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R2",
+            "group": "B",
+            "phone": "Shared",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R1",
+            "group": "B",
+            "phone": "Other",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "phone": "Shared",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "unmatched_join__district",
+    "family": "unmatched_join",
+    "field": "district",
+    "ambiguous_request": "Clean intake records using a lookup of known 'district' values supplied in allowed. Strip whitespace in 'district' and return cleaned record dictionaries.",
+    "explicit_policy": "The lookup is advisory, not an exclusion rule: retain all input rows, including records whose 'district' value is absent from allowed. Strip whitespace only in 'district'; preserve each id and every other field exactly, and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "district": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "district": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "district": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "district": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "district": " Alpha ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "district": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "district": "Alpha",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "district": " Unknown ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "district": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "district": "Unknown",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "district": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "district": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "district": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "unmatched_join__language",
+    "family": "unmatched_join",
+    "field": "language",
+    "ambiguous_request": "Clean intake records using a lookup of known 'language' values supplied in allowed. Strip whitespace in 'language' and return cleaned record dictionaries.",
+    "explicit_policy": "The lookup is advisory, not an exclusion rule: retain all input rows, including records whose 'language' value is absent from allowed. Strip whitespace only in 'language'; preserve each id and every other field exactly, and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "language": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "language": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "language": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "language": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "language": " Alpha ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "language": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "language": "Alpha",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "language": " Unknown ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "language": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "language": "Unknown",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "language": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "language": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "language": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "unmatched_join__office",
+    "family": "unmatched_join",
+    "field": "office",
+    "ambiguous_request": "Clean intake records using a lookup of known 'office' values supplied in allowed. Strip whitespace in 'office' and return cleaned record dictionaries.",
+    "explicit_policy": "The lookup is advisory, not an exclusion rule: retain all input rows, including records whose 'office' value is absent from allowed. Strip whitespace only in 'office'; preserve each id and every other field exactly, and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "office": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "office": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "office": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "office": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "office": " Alpha ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "office": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "office": "Alpha",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "office": " Unknown ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "office": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "office": "Unknown",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "office": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "office": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "office": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "unmatched_join__region",
+    "family": "unmatched_join",
+    "field": "region",
+    "ambiguous_request": "Clean intake records using a lookup of known 'region' values supplied in allowed. Strip whitespace in 'region' and return cleaned record dictionaries.",
+    "explicit_policy": "The lookup is advisory, not an exclusion rule: retain all input rows, including records whose 'region' value is absent from allowed. Strip whitespace only in 'region'; preserve each id and every other field exactly, and do not add fields.",
+    "provenance": "researcher-authored synthetic task and reference; not institutional policy",
+    "public_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": " Beta ",
+            "untouched": "payload-1"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": "Beta",
+            "untouched": "payload-1"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": " Gamma ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": " Delta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": " Epsilon ",
+            "untouched": "payload-2"
+          }
+        ],
+        "allowed": [
+          "Gamma",
+          "Delta",
+          "Epsilon"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": "Gamma",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": "Delta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": "Epsilon",
+            "untouched": "payload-2"
+          }
+        ]
+      }
+    ],
+    "reference_cases": [
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": " Alpha ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "region": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": "Alpha",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "region": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "region": " Unknown ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "region": "Unknown",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": " Unknown ",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": " Beta ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": " Unknown ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "region": " Alpha ",
+            "untouched": "payload-3"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R0",
+            "group": "A",
+            "region": "Unknown",
+            "untouched": "payload-0"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": "Beta",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": "Unknown",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R3",
+            "group": "B",
+            "region": "Alpha",
+            "untouched": "payload-3"
+          }
+        ]
+      },
+      {
+        "rows": [
+          {
+            "id": "R3",
+            "group": "B",
+            "region": " Unknown ",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": " Beta ",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": " Unknown ",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "region": " Alpha ",
+            "untouched": "payload-0"
+          }
+        ],
+        "allowed": [
+          "Alpha",
+          "Beta"
+        ],
+        "expected": [
+          {
+            "id": "R3",
+            "group": "B",
+            "region": "Unknown",
+            "untouched": "payload-3"
+          },
+          {
+            "id": "R2",
+            "group": "B",
+            "region": "Beta",
+            "untouched": "payload-2"
+          },
+          {
+            "id": "R1",
+            "group": "A",
+            "region": "Unknown",
+            "untouched": "payload-1"
+          },
+          {
+            "id": "R0",
+            "group": "A",
+            "region": "Alpha",
+            "untouched": "payload-0"
+          }
+        ]
+      }
+    ]
+  }
+]

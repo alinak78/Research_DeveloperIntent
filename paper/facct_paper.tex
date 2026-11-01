@@ -1,0 +1,340 @@
+\documentclass[manuscript,screen,review,anonymous]{acmart}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\setcopyright{none}
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\acmConference[FAccT '27]{ACM Conference on Fairness, Accountability, and Transparency}{June 21--24, 2027}{}
+\acmYear{2027}
+\title[Whose Intent Counts?]{Whose Intent Counts? Auditing Requirement Violations in LLM-Generated Data-Cleaning Code}
+\hypersetup{pdfauthor={},pdftitle={Whose Intent Counts?},pdfsubject={Anonymous research development draft}}
+
+\begin{document}
+\begin{abstract}
+When language models generate data-cleaning code from underspecified requests, a passing test suite can conceal choices about which records are retained, merged, or excluded. Treating these choices as violations of a developer's implicit intent leaves an accountability question unresolved: whose requirements should define reference behavior? We offer a reusable normative evaluation protocol connecting executable constraints to documented policy sources, affected parties, and contested interpretations. Its central question is how preprocessing choices acquire policy authority before a record reaches administrative review. We retain Intent Violation Rate as a conditional measure of reference-requirement nonconformance, alongside public-test success, unconditional failure, and full compliance. Reanalysis of an existing 49-task algorithm pilot illustrates the measurement gap without establishing social harms. New experiments include 120 fresh local-model generations, an exhaustive synthetic protocol stress test, and reference-set sensitivity analysis. The local model fails the strict function interface in both conditions; a separately reported, post hoc name-only adapter exposes limited conditional policy compliance. The stress test shows how identity corruption can escape checks of record counts and non-ID content. We specify a source-grounded audit of public-service intake transformations comparing ambiguous requests, explicit policies, and clarification conditions. Its domain results are not yet available. The protocol specifies what an evaluator must document, test, and leave unresolved. These experiments assess the protocol under controlled synthetic and archived-data conditions; they do not validate it in public-service practice.
+\end{abstract}
+\ccsdesc[500]{Software and its engineering~Software testing and debugging}
+\ccsdesc[300]{Social and professional topics~Computing / technology policy}
+\keywords{AI-assisted programming, sociotechnical evaluation, requirement provenance, data cleaning, record retention, accountability}
+\maketitle
+
+\noindent\textbf{Development status.} This manuscript adapts an existing code-generation research idea. The paper now includes 120 fresh local-model generations and two additional computational experiments. All new tasks, fixtures, and reference policies are researcher-authored and synthetic; the original algorithm logs remain archived evidence. The source-grounded public-service corpus, independent annotation, and planned multi-model audit remain unperformed. The strict model results and post hoc interface-adapted results are reported separately.
+
+\section{Introduction}
+A request to ``clean this intake table'' can leave unresolved whether rows with missing optional fields should be retained, whether apparently duplicate entries represent the same person, or whether records unmatched in a join should disappear. A language model generating code must either select an interpretation, request clarification, or expose the unresolved choice. Basic tests can verify field normalization while leaving these retention decisions unexamined. In a consequential workflow, a technically successful transformation may therefore implement an unreviewed policy about which records reach later processing.
+
+The significance of this choice lies in public administration. Administrative procedures can shape access to services even without a change to formal eligibility rules; administrative burden research treats such procedures as a site of policy-making~\cite{herd2018}. In an intake workflow that relies on the cleaned output, omitting a record can make a claimant invisible to the next review stage. A possible pathway is missing optional information, followed by deletion, absence from a review queue, and a requirement to reapply or correct the omission. Each transition depends on institutional arrangements; our current evidence demonstrates none of these downstream events. Data cascades provide a reason to investigate how an upstream data choice can propagate~\cite{sambasivan2021}.
+
+In this bounded sense, a deployed generator can function as an \emph{unelected policy-maker}: it supplies an unmandated default that becomes an operational rule when an institution adopts the generated code. This is a description of delegated policy discretion, not a claim that the model has political agency or bears the institution's responsibility. The FAccT question is who authorizes this default, whose records it renders legible to the state, and who can contest it. Code generation is the mechanism through which that governance question becomes observable.
+
+This paper investigates a specific accountability problem: how to evaluate omitted record-retention requirements without treating a researcher's or developer's preferred behavior as unquestionable ground truth. The problem concerns the construction of the evaluation as well as the generated code. A hidden test can make a policy choice executable, but its executability does not establish that the choice is justified. The evaluator must explain where the requirement came from, whose interests it serves, and how disagreements are represented.
+
+An existing DevIntent pilot provides a starting measurement: Intent Violation Rate (IVR), the fraction of public-test-passing outputs that fail at least one omitted reference constraint, averaged over qualifying tasks. Its original 49-task algorithm corpus makes a conditional test gap visible. However, algorithmic preferences such as sort order do not themselves establish consequences for affected people. Moving from that pilot to FAccT's sociotechnical questions requires changing the evidence, reference-policy construction, and interpretation of the metric.
+
+We offer a reusable normative evaluation protocol for Python transformations used in public-service intake data preparation. The protocol requires an evaluator to document authority, preserve disagreement, test record transformations, and state the limits of any harm inference. The unit is one transformation situated within a workflow. The present contribution comprises these evaluation obligations, archived-algorithm analysis, a fresh local-model pilot, and controlled stress tests of the evaluation protocol. The proposed domain audit describes how to assess the protocol in practice. Its completion is necessary before claiming domain validity, usefulness to practitioners, or improved administrative outcomes.
+
+\section{Conceptual framing and related work}
+\subsection{From latent intent to a documented reference}
+A developer's intent is not directly observable through a test suite. An evaluator observes program behavior and compares it with an operationalization. Jacobs and Wallach~\cite{jacobs2021} distinguish theoretical constructs from their measurements and emphasize the assumptions connecting them. Here, a failed hidden test establishes disagreement with an encoded requirement. It does not demonstrate access to a developer's mental state or establish an independently correct social policy.
+
+We therefore use \emph{reference requirement} for an explicit evaluative commitment with a source, rationale, and limits. A developer can state a requirement without possessing the authority to settle every affected party's interests. Likewise, an institutional policy can be authoritative within a workflow while remaining ethically contestable. The framework records these distinctions rather than compressing them into a single gold label.
+
+\subsection{Social context changes the evaluation}
+Selbst et al.~\cite{selbst2019} analyze failures produced when fairness research abstracts away the social systems in which technical components operate. For a data-cleaning audit, the relevant boundary includes the workflow owner, data subject, review process, policy authority, and evaluator. A row disappearing from a table is an observable event; whether that removal is permissible depends on the workflow and policy. The same operation can be correct in one setting and harmful in another.
+
+Data cascades research documents the organizational significance of data practices in high-stakes AI~\cite{sambasivan2021}. We use it to motivate tracing propagation across a workflow, rather than attributing harm to one line of code in isolation. Administrative burden scholarship further connects procedural choices to access to public programs~\cite{herd2018}. Neither source substantiates a particular intake policy or the prevalence of failures in our proposed setting.
+
+Spade's analysis of administrative violence, developed through critical trans politics, challenges the assumption that formal recognition and inclusion in state institutions are sufficient goals~\cite{spade2015}. This perspective raises a further question for record-retention audits: representation in an administrative dataset may enable access to services, surveillance, or both. We therefore treat preservation as a situated requirement whose justification must be documented. We use administrative violence as a lens for examining institutional arrangements and their material consequences; the synthetic deletion experiments do not establish such violence.
+
+\subsection{Stronger tests and clarification are established approaches}
+EvalPlus demonstrates that expanding executable tests reveals incorrect code missed by weaker suites~\cite{liu2023}. Consequently, merely adding hidden constraints is insufficient as a novelty claim. Our proposed contribution lies in making the authority and contestability of those constraints inspectable, and assessing retention choices under controlled information conditions.
+
+ClarifyGPT already studies ambiguity detection and targeted questions for code generation~\cite{mu2023}. We treat generic clarification as a baseline. The proposed retention-focused condition asks whether a particular omitted policy can be surfaced, while recording which information is actually revealed. We do not claim that asking questions is new or that clarification necessarily produces an ethically legitimate policy.
+
+\section{Requirement-provenance audit framework}
+\subsection{Scope and actors}
+The protocol is intended for reuse by researchers and auditors evaluating data preparation before review of public-service intake records. It focuses on optional-field missingness, duplicate resolution, and unmatched joins. These families share a measurable operation: records can lose an authorized representation in the output. An audit must identify the source workflow and the role of its output before describing the consequences of that loss.
+
+The developer supplies a programming request; the workflow owner specifies operational policies; record subjects may have interests absent from both. An evaluator constructs tests and thus exercises discretion. Where a source policy conflicts with another documented expectation, the audit retains both interpretations or marks the reference unresolved. It does not automatically elevate the most convenient test to gold truth.
+
+\subsection{Requirement cards}
+Each task has a requirement card with the following fields:
+\begin{enumerate}
+\item A source artifact, access date, version or hash, relevant passage, and permitted use.
+\item The workflow and policy authority, affected parties, and limits of source support.
+\item A reference requirement and documented alternatives or disagreements.
+\item The prompt wording, including which requirement is omitted and what remains explicit.
+\item A mapping from each requirement to executable tests and record-level traces.
+\item Annotation judgments, adjudication, unresolved objections, and anticipated consequences.
+\end{enumerate}
+This card makes the evaluation open to inspection and challenge. Source provenance does not confer ethical legitimacy; it identifies what is being operationalized. If the record-retention rule is invented for an illustration, the card says so. Such an illustration cannot count as a source-grounded domain task.
+
+\subsection{Construction and validation}
+For each task, create an ambiguous prompt, public tests, clarified reference policy, and policy-specific hidden tests. Public tests should check only behavior supported by the ambiguous request. Hidden tests should distinguish the omitted rule without importing unrelated assumptions. A canonical implementation must pass both sets. A deliberate counterimplementation should pass public tests while failing the targeted reference rule. These checks establish satisfiability and diagnostic sensitivity, not normative validity.
+
+For the proposed corpus, two independent annotators will assess source support, prompt explicitness, and test adequacy. Raw disagreements will be preserved before adjudication. The audit will distinguish annotation agreement from stakeholder endorsement. No such annotation or consultation has been completed for the current draft.
+
+\subsection{Traceability and contestability}
+Retention is evaluated through stable input identifiers and a documented relation between input records and authorized output representations. One-to-one ID preservation is appropriate for a normalization task requiring every record to remain. Deduplication requires a different relation: multiple inputs can legitimately map to one output if the policy authorizes that equivalence. Counting every merged ID as a loss would mismeasure the operation.
+
+The audit records which policy supplied that relation and supports re-scoring under alternative documented policies. An unresolved requirement should trigger a visible unresolved status rather than a hidden default. Technical transparency is assessed separately: code can clearly explain a choice that still violates the reference requirement.
+
+\subsection{Reusable protocol and required outputs}
+Reuse requires more than applying IVR to a new dataset. An evaluator should produce a linked package containing the following outputs:
+\begin{enumerate}
+\item A workflow map identifying where the transformed output is consumed, who can authorize a retention choice, and what correction or appeal route exists. Unknown links remain explicit.
+\item Requirement cards that distinguish documented policy, researcher interpretation, affected-party perspectives where available, and unresolved disagreement. An institutional source alone cannot establish affected-party endorsement.
+\item Versioned prompts, policy-specific tests, synthetic fixtures, and canonical and counterimplementations, with a record of leakage and adequacy checks.
+\item An outcome ledger linking each evaluated output to its information condition, public and reference test outcomes, and authorized input--output record mapping.
+\item An interpretation memo separating observed program behavior, policy nonconformance, plausible administrative consequences, and directly evidenced consequences. It should retain contrary cases and alternative policies.
+\end{enumerate}
+
+These outputs support inspection and reuse without requiring a shared universal definition of correct retention. If a policy has no support, mark it illustrative; if authority is disputed, report policy-specific results or leave the reference unresolved. If the downstream workflow is unknown, stop the inference at record transformation. Missing documentation is an audit finding, not permission to invent a reference or silently exclude a difficult case. We specify these obligations as a normative proposal. Whether they are feasible, sufficient, and useful in practice remains an empirical question for the domain audit.
+
+\section{Measurement}
+For task $t$ and completion $j$, let $S_{tj}$ indicate passing all public tests and $H_{tj}$ indicate failing at least one applicable reference test. With $n_t$ completions,
+\begin{equation}
+\operatorname{IVR}_t=\frac{\sum_{j=1}^{n_t} S_{tj}H_{tj}}{\sum_{j=1}^{n_t} S_{tj}},
+\qquad \text{if }\sum_j S_{tj}>0.
+\end{equation}
+Otherwise the task's IVR is undefined. We retain the name for continuity with DevIntent, while interpreting the observable construct as \emph{reference-requirement nonconformance among public-test passers}.
+
+Macro IVR averages these task-level values over qualifying tasks. Micro IVR pools all public-test passers before taking the ratio. They answer different questions and can differ when task denominators vary. Both must report their qualifying counts. Undefined values must not be replaced with zero.
+
+Conditional IVR can improve merely because fewer difficult outputs pass public tests. We therefore report public-test pass rate, the joint public-pass/reference-fail rate, reference failure across all outputs, and full compliance across all outputs. Full compliance requires passing both test sets. New executions should distinguish assertion failures, crashes, and timeouts; the archived pilot logs do not support that decomposition.
+
+For comparisons, use all tasks for unconditional rates and the common qualifying-task set for paired IVR contrasts, with excluded counts. Cluster uncertainty by source workflow, keeping variants, models, and conditions together. An intervention's lower conditional IVR alone does not establish improved reliability.
+
+For a justified group $g$, row-loss rate is the fraction of distinct input IDs in $g$ lacking an authorized output representation. Report group counts and the mapping policy. Unknown group membership is separate, and empty denominators remain undefined. A synthetic group gap demonstrates behavior on constructed fixtures; it does not estimate population discrimination or harm severity.
+
+\section{Preliminary algorithm pilot: reanalysis}
+\subsection{Evidence and procedure}
+The archived evaluation logs contain 49 algorithm tasks with five completions each for two model labels: Claude Sonnet 4.6 and GPT-4.1. The originating project describes the tasks as ambiguous/clarified specification pairs derived from HumanEval+~\cite{liu2023}. This reanalysis reads stored public-test and hidden-test outcomes. It does not regenerate outputs, rerun candidate code, or independently verify provider snapshots, request contents, or original decoding settings.
+
+The originating manuscript reports manual test review, with model assistance drafting some tests, and a single-annotator construction process. These are source-reported procedures, not newly established facts. The algorithm corpus is purposive and small. It is preliminary measurement evidence and does not support inference about our proposed domain.
+
+We recompute each task's IVR, macro and micro aggregates, all-output rates, and 95\% bootstrap intervals. For continuity with the original analysis, intervals resample the qualifying tasks 10,000 times with seed 42. The analysis records SHA-256 hashes of both input files. Treating tasks as the resampling unit captures between-task variation in these logs, not population representativeness or all uncertainty in benchmark construction.
+
+\subsection{Results and interpretation}
+\begin{table}[t]
+\centering
+\caption{Reanalysis of stored algorithm-pilot outcomes. Each log contains 245 outputs. Model names are archived labels. IVR is conditional on public-test success; full compliance is over all outputs.}
+\label{tab:pilot}
+\begin{tabular}{lrr}
+\toprule
+Measure & Claude label & GPT label \\
+\midrule
+Public-test passers & 231/245 & 227/245 \\
+Public-test pass rate & 94.3\% & 92.7\% \\
+Qualifying tasks & 47/49 & 46/49 \\
+Violations among passers & 128/231 & 143/227 \\
+Macro IVR & 54.5\% & 63.5\% \\
+95\% bootstrap interval & 40.4--68.1\% & 50.0--76.5\% \\
+Micro IVR & 55.4\% & 63.0\% \\
+Joint public-pass/reference-fail & 52.2\% & 58.4\% \\
+Reference failure, all outputs & 58.0\% & 65.7\% \\
+Full compliance, all outputs & 42.0\% & 34.3\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The recomputed macro IVRs match the original estimates (Table~\ref{tab:pilot}). They are means of conditional task rates, not percentages of all problems or all generated programs. Public-test success exceeds 92\% for both logs, while fewer than half of outputs pass both sets of tests. This supports the limited observation that public-test success and reference-constraint satisfaction differ in this corpus.
+
+The Claude-labeled log excludes HumanEval/101 and HumanEval/112 because no output passes the public tests; the GPT-labeled log excludes HumanEval/21, HumanEval/108, and HumanEval/112. These exclusions change the tasks contributing to the two macro estimates. The new common-support comparison below reports an exploratory paired analysis. We make no inference of equivalence or difference from interval overlap.
+
+Five samples per task yield coarse conditional rates. We do not describe extreme observed rates as deterministic behavior or extrapolate them to new generations. The logs cannot establish whether models knowingly exploit tests, whether an unstated requirement was reasonably inferable, or whether the source task policy was legitimate. The pilot anchors the protocol's denominator and measurement requirements. It provides no validation of requirement authority, workflow mapping, or consequences for public-service claimants; those are separate evidentiary obligations.
+
+\subsection{New experiment: reference-set sensitivity}
+We held every archived public-test outcome fixed and enumerated all nonempty subsets of each task's one to three recorded reference constraints. This produced 181 task--subset evaluations for the Claude-labeled log and 178 for the GPT-labeled log. We first averaged subset scores within each qualifying task, then averaged tasks; tasks with more subsets therefore received no additional macro weight. This is a new measurement-perturbation experiment on existing outcomes, not new model generation or prompt disclosure.
+
+\begin{table}[t]
+\centering
+\caption{Reference-set sensitivity on archived outputs. The public-passing set is unchanged within each log. Uniform-subset and single-constraint means average within task before macro aggregation.}
+\label{tab:sensitivity}
+\begin{tabular}{lrr}
+\toprule
+Reference selection & Claude label & GPT label \\
+\midrule
+All reference constraints & 54.5\% & 63.5\% \\
+Uniform nonempty-subset mean & 42.8\% & 48.9\% \\
+Single-constraint mean & 36.2\% & 40.8\% \\
+Tasks with subset-sensitive IVR & 19/47 & 23/46 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The lower scores in Table~\ref{tab:sensitivity} do not indicate improved model behavior: none of the outputs changed. Under a union-of-failures definition, removing constraints cannot increase a fixed task's IVR. The experiment quantifies the extent of this dependence in the pilot and identifies tasks affected by reference selection. It supports reporting the scope and provenance of constraints alongside the score; it does not establish which subset is normatively appropriate.
+
+On the 45 tasks with public-test passers in both logs, full-reference macro IVRs were 56.9\% and 62.7\%. The paired GPT-minus-Claude difference was 5.8 percentage points; a 10,000-resample task-paired bootstrap with seed 20261101 gave an exploratory 95\% interval of 0.9--12.0 points. This interval describes task resampling within the matched corpus, not model superiority in a population or a confirmatory result. The common-support restriction excludes four tasks, and benchmark-construction uncertainty remains unmodeled.
+
+\section{New experiment: synthetic protocol stress test}
+\subsection{Design and controls}
+We executed an exhaustive laboratory test across optional-field cleaning, name-based duplicate collapse, and unmatched lookup filtering. Each twelve-row fixture contained six arbitrary A labels and six B labels. We varied the number of hazardous values in each group over $\{0,1,3,6\}$ and applied four variants: original order, reversed order, swapped group labels, and bijectively renamed IDs. The 192 family--composition--variant fixtures are constructed stress cases, not independent sampled workflows or populations.
+
+For every fixture we evaluated three authored controls: preserve records; apply the family-specific filter; and an adversarial identity-alias control that restores removed payloads under a surviving or fabricated ID. The last control deliberately preserves count and non-ID content while corrupting identity. Two researcher-authored reference policies specified preservation versus explicit filtering. All nine family--implementation combinations passed ordinary-case public checks before stress evaluation. The full grid contained 1,152 implementation--fixture--policy evaluations. No control was generated by a model, and no policy was institutionally validated.
+
+We compared output count, the multiset of all non-ID payload fields, and the full ID-aware record multiset. The payload check is stronger than a check of text alone. Reference and implementation functions were coded separately, and every control matched its corresponding policy on all fixtures. A local design record preceded execution; it is not an externally registered protocol.
+
+\subsection{Results and interpretation}
+\begin{table}[t]
+\centering
+\caption{Identity-alias controls under the preservation policy. Both weaker checks pass on all 64 fixtures per family; the final column counts cases where that reassurance conflicts with the ID-aware reference. Counts describe an exhaustive authored grid, not model prevalence.}
+\label{tab:stress}
+\begin{tabular}{lrrr}
+\toprule
+Family & Weaker checks pass & ID-aware pass & False reassurance \\
+\midrule
+Optional field & 64/64 & 4/64 & 60/64 \\
+Name-based collapse & 64/64 & 12/64 & 52/64 \\
+Unmatched lookup & 64/64 & 4/64 & 60/64 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Across the 192 identity-alias preservation evaluations, 172 passed both weaker checks while failing the ID-aware reference (Table~\ref{tab:stress}). This is a deliberately constructed blind spot, not an estimate of how often assistants corrupt IDs. The preserving control passed 192/192 preservation-policy evaluations but only 20/192 filtering-policy evaluations; the filtering control showed the reverse. Thus compliance rankings changed with the encoded policy wherever the policies disagreed. Neither policy's legitimacy follows from these counts.
+
+Group identity-loss contrasts ranged from $-1$ to $1$ under preservation, as the deliberately asymmetric boundary fixtures permit. This range is a property of the constructed grid, not an estimate of demographic disparity. For deduplication, exact-ID and equal-name policies intentionally differ: equal names alone do not establish that two IDs denote the same person. The experiment establishes whether the protocol detects controlled failures and records policy dependence. It does not establish downstream administrative harm.
+
+\section{New experiment: fresh local-model pilot}
+\subsection{Frozen design and execution}
+We generated 120 new responses using the installed local \texttt{llama3.2:1b} model through Ollama 0.34.0. The server reported 1.2B parameters, Q8\_0 quantization, and model digest beginning \texttt{baf6a787fdff}; the full digest is retained with the raw data. This is a different model and experiment from the archived Claude/GPT logs. We did not use cloud API credentials or obtain new Claude/GPT generations.
+
+Twelve authored templates comprised four field variants within each of the three operation families. These are dependent templates from three synthetic families, not twelve independently sourced administrative workflows. Both conditions supplied identical ordinary-case public examples. The ambiguous condition omitted the reference policy; the explicit condition supplied it. Reference policies retained optional-field and lookup-miss records and deduplicated only repeated exact IDs, retaining the first row. Each template had two public cases and four held-out reference cases. No institutional policy, real claimant record, or stakeholder endorsement was used.
+
+For each template and condition, we requested five responses with seeds 17, 29, 43, 61, and 89, temperature 0.8, top-$p$ 0.9, a 512-token output limit, and a 2,048-token context setting. Request order was shuffled with seed 20261101. The same seed schedule paired conditions without guaranteeing identical decoding paths. The local design was recorded before generation; prompts and outputs were not repaired after inspecting results. Requests, raw responses, server metadata, output tokens, stop reasons, timestamps, task definitions, and file hashes are retained. All 120 requests returned responses; one explicit-condition response reached the output limit.
+
+Candidates were screened for a restricted Python subset and evaluated in isolated Python processes under a macOS sandbox denying network access, filesystem writes, and child-process creation. AST screening and restricted builtins rejected imports and host-file access. CPU and wall limits were two and four seconds, respectively; this environment is not a production container and retains read-only host visibility outside the screened language. All twelve authored positive controls passed the same six-case evaluation path, and a prohibited file-access control was rejected before execution.
+
+\subsection{Strict results and an exploratory interface adapter}
+Under the strict requested \texttt{solution(rows, allowed)} interface, neither condition produced a public-test-passing candidate. The gate rejected 112 outputs for lacking a function named \texttt{solution}; seven had syntax errors and one contained unsupported module-level statements. Public pass and full compliance were 0/60 in each condition. Conditional IVR is therefore undefined in both conditions. This is an interface/evaluation failure, not evidence of zero policy violations, equal policy understanding, or an ineffective disclosure intervention.
+
+After observing the first 55 interface failures, we documented a secondary, post hoc adapter. It accepts only a single top-level function with exactly two positional arguments and renames that function to \texttt{solution}. It does not change parameters, bodies, imports, or return values; self-referential functions are not rewritten. Fifty outputs were ineligible. Of seventy name-adapted outputs, seven still failed the original language gate. This analysis changes the evaluation interface without generating or repairing model behavior; it cannot replace the strict result.
+
+\begin{table}[t]
+\centering
+\caption{Fresh local-model outcomes, five responses per template and condition. Secondary rows retain all 60 outputs per condition in unconditional denominators, including adapter-ineligible outputs. IVR is conditional on public success; the qualifying template sets differ.}
+\label{tab:localmodel}
+\begin{tabular}{lrr}
+\toprule
+Measure & Ambiguous & Explicit \\
+\midrule
+Strict public pass & 0/60 & 0/60 \\
+Strict full compliance & 0/60 & 0/60 \\
+Strict macro IVR & Undefined & Undefined \\
+\midrule
+Post hoc adapter: public pass & 9/60 & 8/60 \\
+Post hoc adapter: full compliance & 0/60 & 4/60 \\
+Post hoc adapter: qualifying templates & 7/12 & 6/12 \\
+Post hoc adapter: macro IVR & 100.0\% & 58.3\% \\
+Post hoc adapter: micro IVR & 100.0\% & 50.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The adapter reveals four explicit-condition outputs that satisfy all six cases, compared with none in the ambiguous condition. These comprise two duplicate-record and two lookup-task outputs; neither optional-field condition achieves full compliance. The unconditional difference is 4/60, or 6.7 percentage points, under this secondary interface only. Low public success, differing qualifying template sets, the post hoc adapter, one small model, and only three authored families preclude a robust policy-disclosure effect claim. No population confidence interval or confirmatory significance test is reported. The completed pilot demonstrates why interface eligibility and undefined denominators must be reported before interpreting conditional policy scores.
+
+\section{Proposed source-grounded domain audit}
+The domain audit is a prospective assessment of the reusable protocol. It must examine both code behavior and whether evaluators can construct the required artifacts from messy source material. The archived sensitivity analysis, synthetic stress test, and fresh local-model pilot assess distinct components; none substitutes for this source-grounded assessment.
+
+\subsection{Corpus and questions}
+The planned audit targets 12--20 independent transformation tasks in one public-service intake context. Tasks will be sourced from public documentation, issue reports, data dictionaries, or permitted organizational artifacts. Variants from one workflow will form a cluster. Inclusion and exclusion rules will be frozen before inspecting model outcomes, and all exclusions logged. The completed synthetic model templates and stress fixtures will not count toward this source-grounded corpus.
+
+RQ1 asks how often code passing public tests violates documented retention rules. RQ2 compares explicit policies and clarification. RQ3 examines requirement authority and unresolved disagreement. A secondary question traces which records disappear and, where group definitions are justified, differences on synthetic fixtures. No real applicant data is needed; stable synthetic IDs can exercise documented branches without reproducing personal records.
+
+\subsection{Conditions and information control}
+For two frozen accessible model snapshots, the plan uses ten independent completions per task per condition:
+\begin{description}
+\item[Ambiguous.] Provide the ambiguous request and public tests.
+\item[Explicit.] Add the documented reference policy to the same request.
+\item[Generic clarification.] Permit at most one clarifying question and supply a scripted answer from the requirement card.
+\item[Retention-focused clarification.] Use the same question budget while prompting the model to surface an unresolved retention choice.
+\end{description}
+At the target corpus size, this requires 960--1,600 final code generations plus clarification calls. This is a design target, not a performed evaluation or power guarantee. Larger completion counts cannot substitute for independent source workflows.
+
+Scripted answers must be labeled simulated. They are not responses from real stakeholders. An answer reveals the reference policy only if the question requests it; irrelevant questions, nonquestions, refusals, and unresolved choices remain in the assigned-condition analysis. Record question and answer contents, turns, tokens, and latency. The explicit condition is information-rich, not token-matched; benefits cannot be attributed solely to question quality if conditions receive different policy information.
+
+\subsection{Analysis and execution}
+The audit will report all-output outcomes, conditional rates with qualifying counts, and task-cluster bootstrap contrasts across conditions. Record-level traces and qualitative failure categories will support case analysis, including negative and contrary cases. Potential categories include missingness deletion, unjustified collapsing, unmatched-join exclusion, explicit uncertainty, and escalation.
+
+To assess the protocol itself, the audit will also report missing or conflicting policy sources, unresolved record mappings, disagreements about test adequacy, and cases where the downstream consequence cannot be established. It will document whether a second evaluator can reconstruct each reference decision from the released artifacts, with any inaccessible material identified. Failure to construct a defensible reference is a substantive result about the limits of evaluation. The audit must retain these cases in the corpus-construction account rather than presenting only easily operationalized policies.
+
+Requests, exact responses, provider identifiers, timestamps, settings, retries, and costs should be preserved. Candidate code requires a disposable isolated execution environment with networking disabled, no secrets or host mounts, and resource limits. A subprocess timeout alone does not provide this protection. These planned multi-model runs have not been performed; the completed local-model pilot above uses a separate synthetic design and restricted execution path.
+
+\section{Implications for accountability}
+\subsection{Preprocessing as delegated policy discretion}
+The sociotechnical concern is the route by which an apparently technical default acquires administrative force. If staff adopt generated code that treats optional email as mandatory, an undocumented assumption may become an access condition before a formal decision-maker sees the record. The generator's role as an unelected policy-maker is conditional on this adoption and the workflow's reliance on the output. Accountability remains with the institution and the people responsible for procurement, specification, review, and deployment. An audit must identify those decision points instead of locating responsibility solely in a model score.
+
+Data cascades direct attention to how this upstream choice may propagate. Administrative burden directs attention to who must spend effort restoring a missing application. The administrative-violence lens asks how the resulting pattern relates to institutional power and material deprivation, including cases where greater administrative visibility itself creates risk. These are questions for investigation, not labels that follow automatically from a failed retention test.
+
+\subsection{A community protocol for contestable evaluation}
+The audit distinguishes three decisions commonly compressed into a pass/fail score: which behavior occurred, which requirement was encoded, and whether that requirement should govern the workflow. Executable tests directly address the first relative to the second. They cannot independently settle the third.
+
+A requirement card enables a workflow owner or reviewer to inspect the provenance of a choice and challenge an unsupported default. Record traces make exclusion visible before aggregate model scores obscure it. Keeping alternative policies supports contestation where a single reference would conceal disagreement. The reusable contribution is the linked set of documentation, testing, and interpretation obligations: another evaluator can inspect the source of a requirement, substitute a documented alternative, and identify where a consequence claim outruns its evidence. These are specified capabilities of the protocol; their practical value and costs have not been evaluated.
+
+Clarification also relocates responsibility rather than removing it. Asking a developer to decide a retention policy can make an assumption explicit, but the developer may lack the authority or information to resolve it. A responsible workflow needs a way to escalate or leave a decision unresolved. The audit should therefore examine whether the system exposes a consequential choice, not merely whether it obtains any answer.
+
+\section{Limitations}
+The domain audit is incomplete. The current contribution is a normative evaluation protocol with completed laboratory experiments, not an empirically validated public-service audit. Reusability here means that the steps and required outputs are specified; it does not mean that independent teams have successfully applied them. The current evidence cannot establish feasibility, effect sizes, stakeholder acceptance, or deployment value. The authored stress grid is intentionally selected to expose mechanisms. The new local-model pilot has no strict-interface successes; its name-adapted outcomes are post hoc and do not establish an intervention effect. Neither experiment is sampled evidence of public-service failures.
+
+The algorithm logs cover a small purposive corpus, two model labels, and five outputs per task. Original generation provenance cannot be recovered from pass/fail outcomes alone. Shared public benchmarks introduce possible training contamination. Source-reported single-annotator test construction and model-assisted drafting limit claims about reference validity. Canonical passing behavior does not eliminate these concerns.
+
+IVR conditions on public-test success, excludes tasks without passers, and depends on which constraints the evaluator encodes. Full compliance only certifies the tested properties. Synthetic retention gaps do not measure lived consequences, substantive fairness, or legal compliance. Domain policies can themselves be unjust; provenance makes them inspectable but does not legitimate them. Practitioner annotations would not replace participation by affected parties.
+
+The literature review is focused rather than exhaustive. We make no priority claim for ambiguity handling, stronger testing, or sociotechnical measurement. The normative proposal requires scrutiny of whether its obligations are justified and whose perspectives they omit. Claims of domain validity additionally require source-grounded application and substantive engagement with disagreement. Framing the work as a protocol does not remove that empirical limitation or guarantee its suitability for acceptance.
+
+\section{Conclusion}
+When institutions adopt generated preprocessing code, an unspecified technical choice can become an administrative rule about which records remain available for review. We offer a reusable normative evaluation protocol for making the authority, implementation, and contestability of those rules inspectable. IVR supplies one limited diagnostic within that protocol. The archived reference-set experiment quantifies measurement sensitivity, the synthetic stress test exposes identity-blind checks, and the fresh model pilot reveals interface failure and undefined conditional scores. The proposed domain audit must still establish how the protocol handles institutional disagreement, incomplete sources, and consequences in public-service practice.
+
+\section*{Ethical Considerations and Adverse Impacts}
+The reanalysis uses stored algorithm-test outcomes. New experiments use authored synthetic records and controls plus 120 fresh local-model responses, evaluated through the screened, sandboxed execution path described above. No new participant data, real applicant records, stakeholder consultations, or deployment interventions were collected or conducted. The draft claims no institutional ethics approval. Any future interviews, recruitment, or organizational access require appropriate review, informed consent, and data-use arrangements before collection.
+
+A nonconformance score could be misused as a certification of fairness or as a justification for an institution's harmful policy. The framework therefore records authority, alternatives, and unresolved objections, and separates compliance from legitimacy. Synthetic A/B fixture groups have no demographic interpretation. Future corpus publication should minimize personal data, respect source reuse terms, and avoid releasing identifying operational details. Candidate-code execution needs an isolated environment; the archived-outcome analysis executes no generated code; the separate fresh-model pilot screens candidates before restricted execution.
+
+\section*{Generative AI Usage Statement}
+OpenAI Codex (GPT-6-based assistant) was used to adapt the research framing, draft substantial manuscript and planning text, identify relevant sources, and write reanalysis, synthetic-experiment, generation, and evaluation code. A local Llama 3.2 model (Ollama tag \texttt{llama3.2:1b}, Q8\_0) generated the 120 responses evaluated in the new pilot; its exact server digest and inference settings are retained with the experiment artifacts. The assistant checked source pages and ran the included local checks. The exact deployed model identifier and all authors' additional AI usage must be verified before submission; the identifier is not established by this draft. Human authors must independently review the framing, methods, claims, citations, and code and remain responsible for the final work. This draft does not assert that such author review has occurred. The originating pilot manuscript reports model assistance in drafting some constraint tests; that use was not independently reconstructed here.
+
+\clearpage
+\begin{thebibliography}{7}
+\bibitem{herd2018}
+Pamela Herd and Donald P. Moynihan. 2018.
+\emph{Administrative Burden: Policymaking by Other Means}.
+Russell Sage Foundation.
+\url{https://www.russellsage.org/publications/book/administrative-burden}.
+
+\bibitem{spade2015}
+Dean Spade. 2015.
+\emph{Normal Life: Administrative Violence, Critical Trans Politics, and the Limits of Law} (Revised and Expanded Edition).
+Duke University Press.
+\url{https://doi.org/10.1215/9780822374794}.
+
+\bibitem{selbst2019}
+Andrew D. Selbst, danah boyd, Sorelle A. Friedler, Suresh Venkatasubramanian, and Janet Vertesi. 2019.
+Fairness and Abstraction in Sociotechnical Systems.
+In \emph{Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19)}, 59--68.
+\url{https://doi.org/10.1145/3287560.3287598}.
+
+\bibitem{jacobs2021}
+Abigail Z. Jacobs and Hanna Wallach. 2021.
+Measurement and Fairness.
+In \emph{Proceedings of the ACM Conference on Fairness, Accountability, and Transparency (FAccT '21)}.
+\url{https://doi.org/10.1145/3442188.3445901}.
+
+\bibitem{sambasivan2021}
+Nithya Sambasivan, Shivani Kapania, Hannah Highfill, Diana Akrong, Praveen Paritosh, and Lora Aroyo. 2021.
+``Everyone wants to do the model work, not the data work'': Data Cascades in High-Stakes AI.
+In \emph{Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI '21)}.
+\url{https://doi.org/10.1145/3411764.3445518}.
+
+\bibitem{liu2023}
+Jiawei Liu, Chunqiu Steven Xia, Yuyao Wang, and Lingming Zhang. 2023.
+Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation.
+In \emph{Advances in Neural Information Processing Systems}, Vol. 36, 21558--21572.
+\url{https://arxiv.org/abs/2305.01210}.
+
+\bibitem{mu2023}
+Fangwen Mu, Lin Shi, Song Wang, Zhuohao Yu, Binquan Zhang, Chenxue Wang, Shichao Liu, and Qing Wang. 2023.
+ClarifyGPT: Empowering LLM-based Code Generation with Intention Clarification.
+\emph{arXiv preprint arXiv:2310.10996}.
+\url{https://arxiv.org/abs/2310.10996}.
+\end{thebibliography}
+\end{document}
